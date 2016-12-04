@@ -1,0 +1,12 @@
+{
+  "extends":[ "vue","airbnb-base/legacy"],
+  "modules": true,
+  "rules": {
+      "linebreak-style": "off",
+      "no-new": "off",
+      "no-console": "off",
+      "eol-last": "off",
+      "no-undef": "off",
+      "no-underscore-dangle": "off"
+  }
+}
