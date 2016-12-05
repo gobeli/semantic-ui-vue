@@ -8,7 +8,10 @@ import Label from './elements/label.vue';
 import List from './elements/list.vue';
 import ListItem from './elements/list-item.vue';
 
-export default {
+import Checkbox from './modules/checkbox.vue';
+import Radiobutton from './modules/radiobutton.vue';
+
+const components = {
   Buttons,
   Button,
   Input,
@@ -17,5 +20,19 @@ export default {
   Icon,
   Label,
   List,
-  ListItem
+  ListItem,
+
+  Checkbox,
+  Radiobutton
 };
+
+components.install = (Vue) => {
+  for (const c in components) {
+    if (c && c !== 'install') {
+      const component = components[c];
+      Vue.component(component.name, Vue.extend(component));
+    }
+  }
+};
+
+export default components;

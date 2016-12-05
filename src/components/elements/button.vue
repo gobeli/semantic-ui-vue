@@ -1,5 +1,9 @@
 <template>
-  <button @click="click" class="ui button" v-bind:class="{ active: isSelected, labeled: labeled, icon: (iconBefore || iconAfter) }">
+  <button 
+    class="ui button" 
+    @click="click" 
+    :class="{ active: isSelected, icon: (iconBefore || iconAfter) }"
+    :disabled="disabled">
     <ui-icon v-if="iconBefore" class="left" :class="[iconBefore]"></ui-icon>
     <slot></slot>
     <ui-icon v-if="iconAfter" class="right" :class="[iconAfter]"></ui-icon>
@@ -9,6 +13,7 @@
 <script>
 import UiIcon from './icon.vue';
 import Helper from '../../helper.js';
+
 export default {
   name: 'ui-button',
   data() {
@@ -17,10 +22,10 @@ export default {
     };
   },
   props: {
-    name: String,
+    name: [String, Number],
+    disabled: Boolean,
     iconBefore: String,
-    iconAfter: String,
-    labeled: Boolean
+    iconAfter: String
   },
   mounted() {
     this.buttons = Helper.getParent(this.$parent, 'buttons');

@@ -12,7 +12,7 @@
   export default {
     name: 'ui-label',
     props: {
-      name: String,
+      name: [String, Number],
       iconBefore: String,
       iconAfter: String,
       imgSrc: String

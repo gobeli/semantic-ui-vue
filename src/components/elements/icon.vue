@@ -5,7 +5,7 @@
   export default {
     name: 'ui-icon',
     props: {
-      name: String,
+      name: [String, Number],
       icon: String
     },
     methods: {

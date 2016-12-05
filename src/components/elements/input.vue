@@ -29,7 +29,7 @@
       };
     },
     props: {
-      name: String,
+      name: [String, Number],
       type: {
         type: String,
         default: 'text'
@@ -45,10 +45,10 @@
       readonly: Boolean
     },
     watch: {
-      'value'(val) {
+      value(val) {
         this.curValue = val;
       },
-      'curValue'(val) {
+      curValue(val) {
         this.$emit('input', val);
         this.$emit('change', val);
       }

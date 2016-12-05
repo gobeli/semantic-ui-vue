@@ -7,7 +7,7 @@
   export default {
     name: 'ui-buttons',
     props: {
-      name: String,
+      name: [String, Number],
       value: [String, Number],
       'highlight-selected': Boolean
     },

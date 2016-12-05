@@ -29,7 +29,6 @@ build/Release
 # Dependency directories
 node_modules
 jspm_packages
-semantic
 
 # Optional npm cache directory
 .npm
@@ -37,8 +36,9 @@ semantic
 # Optional REPL history
 .node_repl_history
 
-# Bundle
-dist/bunlde.js
+# dist
+dist
   
+semantic
 
 .tmp

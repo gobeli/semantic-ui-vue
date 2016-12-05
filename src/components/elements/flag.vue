@@ -5,7 +5,7 @@
   export default {
     name: 'ui-flag',
     props: {
-      name: String,
+      name: [String, Number],
       country: String
     }
   };

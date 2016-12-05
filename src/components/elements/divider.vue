@@ -7,7 +7,7 @@
   export default {
     name: 'ui-divider',
     props: {
-      name: String
+      name: [String, Number]
     }
   };
 </script>
