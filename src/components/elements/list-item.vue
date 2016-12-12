@@ -1,18 +1,7 @@
 <template>
   <div class="item">
-    <template v-if="icon">
-      <ui-icon :class="[icon]"></ui-icon>
-      <div class="content">
-        <div class="header">
-          {{header}}
-        </div>
-        <div class="description">
-          {{description}}
-        </div>
-        <slot></slot>
-      </div>
-    </template>
-    <template v-else>
+    <ui-icon v-if="icon" :class="[icon]"></ui-icon>
+    <div class="content">
       <div class="header">
         {{header}}
       </div>
@@ -20,7 +9,7 @@
         {{description}}
       </div>
       <slot></slot>
-    </template>
+    </div>
   </div>
 </template>
 <script>
@@ -35,6 +24,9 @@
     },
     components: {
       UiIcon
+    },
+    install(Vue) {
+      Vue.component(this.name, Vue.extend(this));
     }
   };
 </script>

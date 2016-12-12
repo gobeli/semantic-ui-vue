@@ -29,8 +29,7 @@ const components = {
 components.install = (Vue) => {
   for (const c in components) {
     if (c && c !== 'install') {
-      const component = components[c];
-      Vue.component(component.name, Vue.extend(component));
+      Vue.use(components[c]);
     }
   }
 };

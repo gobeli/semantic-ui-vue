@@ -8,6 +8,9 @@
     name: 'ui-divider',
     props: {
       name: [String, Number]
+    },
+    install(Vue) {
+      Vue.component(this.name, Vue.extend(this));
     }
   };
 </script>

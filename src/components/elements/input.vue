@@ -52,6 +52,9 @@
         this.$emit('input', val);
         this.$emit('change', val);
       }
+    },
+    install(Vue) {
+      Vue.component(this.name, Vue.extend(this));
     }
   };
 </script>

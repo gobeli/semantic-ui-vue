@@ -12,6 +12,9 @@
       click() {
         this.$emit('click');
       }
+    },
+    install(Vue) {
+      Vue.component(this.name, Vue.extend(this));
     }
   };
 </script>

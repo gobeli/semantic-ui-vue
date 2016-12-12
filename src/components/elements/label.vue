@@ -25,6 +25,9 @@
     },
     components: {
       UiIcon
+    },
+    install(Vue) {
+      Vue.component(this.name, Vue.extend(this));
     }
   };
 </script>

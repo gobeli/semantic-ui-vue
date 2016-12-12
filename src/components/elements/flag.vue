@@ -7,6 +7,9 @@
     props: {
       name: [String, Number],
       country: String
+    },
+    install(Vue) {
+      Vue.component(this.name, Vue.extend(this));
     }
   };
 </script>
