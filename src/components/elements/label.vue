@@ -19,7 +19,6 @@
     },
     methods: {
       emit(event) {
-        console.log(event);
         this.$emit(event);
       }
     },

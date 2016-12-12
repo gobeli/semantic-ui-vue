@@ -7,36 +7,9 @@
   </head>
   <body>
     <div id="app">
-      <ui-list>
-        <ui-list-item icon="folder">
-          <div class="header">Semantic-Org</div>
-          <div class="description">Updated 10 mins ago</div>
-          <ui-list>
-            <ui-list-item header="testy" description="asdf">
-            </ui-list-item>
-          </ui-list>
-        </ui-list-item>
-        <ui-list-item icon="file">
-          <div class="header">README.md</div>
-          <div class="description">Updated 10 mins ago</div>
-        </ui-list-item>
-      </ui-list>
-
-      <ui-buttons highlight-selected  v-model="selectedButton">
-        <ui-button>Test 1</ui-button>
-        <ui-button>Test 2</ui-button>
-        <ui-button>Test 3</ui-button>
-      </ui-buttons>
-      <div class="ui form">
-        <ui-radiobutton name="test" type="radio" v-model="group1" ui-value="test">
-          Test
-        </ui-radiobutton>
-        <ui-radiobutton name="test2" type="radio" v-model="group1" ui-value="test2">
-          Test 2
-        </ui-radiobutton>
-      </div>
-      <ui-checkbox type="checkbox" v-model="checked">Test</ui-checkbox>
-      <ui-input v-model="group1" type="password"></ui-input>
+      <ui-loader dimmer="inverted">
+        Loading
+      </ui-loader>
     </div>
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script src="/semantic/dist/semantic.min.js"></script>
