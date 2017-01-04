@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue Example</title>
+    <link rel="stylesheet" href="/semantic/dist/semantic.min.css">
+  </head>
+  <body>
+    <div id="app" class="pushable">
+      <ui-sidebar :visible="sidebarVisible">
+        <div class="item">
+          <div class="active header">
+            Elements
+          </div>
+          <div class="menu">
+            <router-link v-for="route in componentRoutes" :to="route.path" class="item">{{route.name}}</router-link>
+          </div>
+        </div>
+      </ui-sidebar>
+      <transition name="fade">
+        <div class="pusher" :class="{ dimmed: sidebarVisible }" @click="toggleMenu($event)">
+          <div class="ui secondary pointing menu">
+            <a class="item"><ui-icon icon="content"></ui-icon></a>
+            <router-link class="item active" to="/">Home</router-link>
+            <div class="right menu">
+              <a class="ui item" target="_blank" href="https://github.com/gobeli/semantic-ui-vue">
+                GitHub
+              </a>
+            </div>
+          </div>
+          <div class="ui container">
+            <router-view></router-view>
+          </div>
+        </div>
+      </transition>
+    </div>
+    
+    <script src="/dist/bundle.js"></script>
+  </body>
+</html>

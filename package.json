@@ -3,9 +3,9 @@
   "version": "0.0.1",
   "description": "Semantic UI integration for vue.js 2.0",
   "author": "Etienne Gobeli",
-  "repository": { 
-    "type" : "git",
-    "url" : "https://github.com/gobeli/vue-semantic-ui"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gobeli/vue-semantic-ui"
   },
   "scripts": {
     "build": "webpack",
@@ -14,7 +14,8 @@
   "dependencies": {
     "vue": "^2.0.3",
     "vue-clickaway": "^2.0.0",
-    "vue-hot-reload-api": "^2.0.6"
+    "vue-hot-reload-api": "^2.0.6",
+    "vue-router": "^2.1.1"
   },
   "devDependencies": {
     "babel-core": "^6.1.2",
@@ -38,6 +39,7 @@
     "sass-loader": "^3.2.0",
     "semantic-ui": "^2.2.6",
     "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "vue-html-loader": "^1.0.0",
     "vue-loader": "^7.3.0",
     "webpack": "^1.12.2",

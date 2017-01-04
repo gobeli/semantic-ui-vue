@@ -4,17 +4,17 @@ const webpack = require('webpack');
 
 module.exports = {
   entry:  {
-    app: './src/main.js'
+    app: './docs/main.js'
   },
   output: {
-    path: './dist',
+    path: './docs/dist',
     publicPath: '/dist/',
     filename: 'bundle.js'
   },
 	devServer: {
-  inline: true,
-  contentBase: './',
-  port: 3000
+    inline: true,
+    contentBase: './docs',
+    port: 3000
 	},
   module: {
     loaders: [

@@ -12,7 +12,7 @@
 
 <script>
 import UiIcon from './icon.vue';
-import Helper from '../../helper.js';
+import Helper from '../helper.js';
 
 export default {
   name: 'ui-button',

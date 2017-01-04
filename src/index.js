@@ -11,6 +11,7 @@ import Loader from './elements/loader.vue';
 
 import Checkbox from './modules/checkbox.vue';
 import Radiobutton from './modules/radiobutton.vue';
+import Sidebar from './modules/sidebar.vue';
 
 const components = {
   Buttons,
@@ -25,7 +26,8 @@ const components = {
   Loader,
 
   Checkbox,
-  Radiobutton
+  Radiobutton,
+  Sidebar
 };
 
 components.install = (Vue) => {
