@@ -12,11 +12,12 @@ const routes = [
   { path: '/', component: Views.DocHome }
 ];
 
-const componentRoutes = [
-  { path: '/button', component: Views.DocButton, name: 'Button' }
+const elementRoutes = [
+  { path: '/button', component: Views.DocButton, name: 'Button' },
+  { path: '/divider', component: Views.DocDivider, name: 'Divider' }
 ];
 
-routes.push(...componentRoutes);
+routes.push(...elementRoutes);
 
 const router = new VueRouter({
   routes
@@ -30,7 +31,7 @@ new Vue({
   data() {
     return {
       sidebarVisible: false,
-      componentRoutes
+      elementRoutes
     };
   },
   methods: {

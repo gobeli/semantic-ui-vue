@@ -2,35 +2,39 @@
   <div>
     <h1>Button</h1>
     <demo-panel>
-      <div slot="demo">
+      <template slot="demo">
         <ui-button>Follow</ui-button>
         <ui-button class="primary">Primary</ui-button>
         <ui-button class="red" icon-before="alarm">Red with icon before</ui-button>
         <ui-button class="blue" icon-after="save">Blue with icon after</ui-button>
         <ui-button icon-before="play"></ui-button>
-      </div>
-      <pre slot="code">&lt;ui-button&gt;Follow&lt;/ui-button&gt;
-&lt;ui-button class=&quot;primary&quot;&gt;Primary&lt;/ui-button&gt;
-&lt;ui-button class=&quot;red&quot; icon-before=&quot;alarm&quot;&gt;Red with icon before&lt;/ui-button&gt;
-&lt;ui-button class=&quot;blue &quot;icon-after=&quot;save&quot;&gt;Blue with icon after&lt;/ui-button&gt;
-&lt;ui-button icon-before=&quot;play&quot;&gt;&lt;/ui-button&gt;</pre>
+      </template>
+      <template slot="code">{{buttonDemo}}</template>
     </demo-panel>
     <ui-divider></ui-divider>
-    <h2>Options</h2>
     <options-table :options="options"></options-table>
-    <p>Pass in all other option as a class. <br>
+    <p>Pass in all other <a target="_blank" href="http://semantic-ui.com/elements/button.html">options</a> as a class. <br>
     For instance a labeled button: </p>
     <demo-panel>
-      <div slot="demo">
+      <template slot="demo">
         <ui-button class="facebook right labeled" icon-after="facebook">Follow</ui-button>
-      </div>
-      <pre slot="code">&lt;ui-button class=&quot;facebook right labeled&quot; icon-after=&quot;facebook&quot;&gt;Follow&lt;/ui-button&gt;</pre>
+      </template>
+      <template slot="code">&lt;ui-button class=&quot;facebook right labeled&quot; icon-after=&quot;facebook&quot;&gt;Follow&lt;/ui-button&gt;</template>
     </demo-panel>
     
     <ui-divider></ui-divider>
-    <h1>Button</h1>
-    <h2>Demo</h2>
-    
+    <h1>Buttons</h1>
+    <demo-panel>
+      <div slot="demo">
+        <ui-buttons v-model="buttons" highlight-selected>
+          <ui-button name="button-1" class="primary">1</ui-button>
+          <ui-button name="button-2" class="primary">2</ui-button>
+          <ui-button name="button-3" class="primary">3</ui-button>
+        </ui-buttons>
+      </div>
+      <template slot="code">{{buttonsDemo}}</template>
+    </demo-panel>
+    <options-table :options="buttonsOptions"></options-table>
   </div>
 </template>
 <script>
@@ -38,6 +42,7 @@
     name: 'doc-button',
     data() {
       return {
+        buttons: 0,
         options: [{
           name: 'name',
           type: '[String, Number]',
@@ -54,7 +59,32 @@
           name: 'icon-after',
           type: 'String',
           description: 'Icon after the text'
-        }]
+        }],
+        buttonsOptions: [{
+          name: 'name',
+          type: '[String, Number]',
+          description: 'Name of the button'
+        }, {
+          name: 'value (v-model)',
+          type: '[String, Number]',
+          description: 'Value of the button-group (contains name/_uid of the selected button)'
+        }, {
+          name: 'highlight-selected',
+          type: 'Boolean',
+          description: 'If set, the selected button will be highlighted'
+        }],
+        buttonDemo:
+`<ui-button>Follow</ui-button>
+<ui-button class="primary">Primary</ui-button>
+<ui-button class="red" icon-before="alarm">Red with icon before</ui-button>
+<ui-button class="blue" icon-after="save">Blue with icon after</ui-button>
+<ui-button icon-before="play"></ui-button>`,
+        buttonsDemo:
+`<ui-buttons v-model="buttons" highlight-selected>
+  <ui-button name="button-1" class="primary">1</ui-button>
+  <ui-button name="button-2" class="primary">2</ui-button>
+  <ui-button name="button-3" class="primary">3</ui-button>
+</ui-buttons>`
       };
     }
   };

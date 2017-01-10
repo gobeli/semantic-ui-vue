@@ -8,7 +8,7 @@
         <slot name="demo"></slot>
       </div>
       <div class="ui secondary segment" v-show="codeOpen">
-        <slot name="code"></slot>
+        <pre><slot name="code"></slot></pre>
       </div>
     </div>
 </template>

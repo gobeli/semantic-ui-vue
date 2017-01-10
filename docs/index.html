@@ -13,7 +13,7 @@
             Elements
           </div>
           <div class="menu">
-            <router-link v-for="route in componentRoutes" :to="route.path" class="item">{{route.name}}</router-link>
+            <router-link v-for="route in elementRoutes" :to="route.path" @click="sidebarVisible = false" class="item">{{route.name}}</router-link>
           </div>
         </div>
       </ui-sidebar>
@@ -30,6 +30,7 @@
           </div>
           <div class="ui container">
             <router-view></router-view>
+            <ui-divider></ui-divider>
           </div>
         </div>
       </transition>
