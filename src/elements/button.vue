@@ -16,11 +16,9 @@ import Helper from '../helper.js';
 
 export default {
   name: 'ui-button',
-  data() {
-    return {
-      buttons: null
-    };
-  },
+  data: () => ({
+    buttons: null
+  }),
   props: {
     name: [String, Number],
     disabled: Boolean,

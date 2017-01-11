@@ -29,5 +29,5 @@
       demo: `<ui-icon icon="home" size="big"></ui-icon>
 <ui-icon icon="users" size="massive"></ui-icon>`
     })
-  }
+  };
 </script>

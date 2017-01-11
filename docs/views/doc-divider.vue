@@ -26,16 +26,14 @@
 <script>
   export default {
     name: 'doc-divider',
-    data() {
-      return {
-        demo: `<p>Lorem ipsum ....
+    data: () => ({
+      demo: `<p>Lorem ipsum ....
 <ui-divider class="horizontal">OR</ui-divider>
 Lorem ipsum ...</p>
 <ui-divider></ui-divider>`,
-        demoOther: `<p>Lorem ipsum ...
+      demoOther: `<p>Lorem ipsum ...
 <ui-divider class="fitted"></ui-divider>
 Lorem ipsum ...</p>`
-      };
-    }
+    })
   };
 </script>

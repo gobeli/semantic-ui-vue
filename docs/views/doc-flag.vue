@@ -16,17 +16,15 @@
 <script>
   export default {
     name: 'doc-flag',
-    data() {
-      return {
-        options: [{
-          name: 'country',
-          type: 'String',
-          description: 'ISO code of the country'
-        }],
-        demo: `<ui-flag country="ae"></ui-flag>
+    data: () => ({
+      options: [{
+        name: 'country',
+        type: 'String',
+        description: 'ISO code of the country'
+      }],
+      demo: `<ui-flag country="ae"></ui-flag>
 <ui-flag country="france"></ui-flag>
 <ui-flag country="myanmar"></ui-flag>`
-      };
-    }
+    })
   };
 </script>

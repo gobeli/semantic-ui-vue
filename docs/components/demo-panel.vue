@@ -15,11 +15,9 @@
 <script>
   export default {
     name: 'demo-panel',
-    data() {
-      return {
-        codeOpen: false
-      };
-    },
+    data: () => ({
+      codeOpen: false
+    }),
     props: {
       options: Array
     },

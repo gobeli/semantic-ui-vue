@@ -23,11 +23,9 @@
 <script>
   export default {
     name: 'ui-input',
-    data() {
-      return {
-        curValue: this.value
-      };
-    },
+    data: () => ({
+      curValue: this.value
+    }),
     props: {
       name: [String, Number],
       type: {
