@@ -10,7 +10,7 @@
       <template slot="code">{{demo}}</template>
     </demo-panel>
     <options-table :options="options"></options-table>
-    <p>For a fulll list of countries see the <a href="http://semantic-ui.com/elements/flag.html">semantic-ui docs</a></p>
+    <p>For a fulll list of countries see the <a target="_blank" href="http://semantic-ui.com/elements/flag.html">semantic-ui docs</a></p>
   </div>
 </template>
 <script>

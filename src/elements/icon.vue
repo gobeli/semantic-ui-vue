@@ -1,12 +1,13 @@
 <template>
-  <i class="icon" :class="[icon]" @click="click"></i>
+  <i class="icon" :class="[icon, size]" @click="click"></i>
 </template>
 <script>
   export default {
     name: 'ui-icon',
     props: {
       name: [String, Number],
-      icon: String
+      icon: String,
+      size: String
     },
     methods: {
       click() {
