@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Options</h2>
+    <h2>Props</h2>
     <table class="ui celled striped table">
       <thead>
         <tr>
@@ -10,6 +10,11 @@
         </tr>
       </thead>
       <tbody>
+        <tr> 
+          <td>name</td>
+          <td>[String, Number]</td>
+          <td>Name of the control</td>
+        </tr>
         <tr v-for="option in options">
           <td>{{option.name}}</td>
           <td>{{option.type}}</td>

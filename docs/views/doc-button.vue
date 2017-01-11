@@ -44,10 +44,6 @@
       return {
         buttons: 0,
         options: [{
-          name: 'name',
-          type: '[String, Number]',
-          description: 'Name of the button'
-        }, {
           name: 'disabled',
           type: 'Boolean',
           description: 'If set, the button is displayed as disabled'
@@ -61,10 +57,6 @@
           description: 'Icon after the text'
         }],
         buttonsOptions: [{
-          name: 'name',
-          type: '[String, Number]',
-          description: 'Name of the button'
-        }, {
           name: 'value (v-model)',
           type: '[String, Number]',
           description: 'Value of the button-group (contains name/_uid of the selected button)'

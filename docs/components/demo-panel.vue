@@ -8,13 +8,13 @@
         <slot name="demo"></slot>
       </div>
       <div class="ui secondary segment" v-show="codeOpen">
-        <pre><slot name="code"></slot></pre>
+        <pre class="prettyprint"><slot name="code"></slot></pre>
       </div>
     </div>
 </template>
 <script>
   export default {
-    name: 'options-table',
+    name: 'demo-panel',
     data() {
       return {
         codeOpen: false
@@ -22,6 +22,9 @@
     },
     props: {
       options: Array
+    },
+    mounted() {
+      PR.prettyPrint();
     }
   };
 </script>
