@@ -16,7 +16,8 @@ const elementRoutes = [
   { path: '/button', component: Views.DocButton, name: 'Button' },
   { path: '/divider', component: Views.DocDivider, name: 'Divider' },
   { path: '/flag', component: Views.DocFlag, name: 'Flag' },
-  { path: '/icon', component: Views.DocIcon, name: 'Icon' }
+  { path: '/icon', component: Views.DocIcon, name: 'Icon' },
+  { path: '/input', component: Views.DocInput, name: 'Input' }
 ];
 
 routes.push(...elementRoutes);

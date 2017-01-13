@@ -1,10 +1,10 @@
 <template>
-  <div class="ui label" :class="{image: imgSrc}">
+  <div class="ui label" @click="emit('click')" :class="{image: imgSrc, button: clickable}">
     <img v-if="imgSrc" :src="imgSrc" :alt="$slots.default[0].textContent">
     <ui-icon v-if="iconBefore" @click="emit('icon-before-click')" :class="[iconBefore]"></ui-icon>
     <slot></slot>
     <ui-icon v-if="iconAfter" @click="emit('icon-after-click')" :class="[iconAfter]"></ui-icon>
-    <div class="detail"><slot name="detail"></slot></div>
+    <div class="detail" v-if="$slots.detail"><slot name="detail"></slot></div>
   </div>
 </template>
 <script>
@@ -15,7 +15,8 @@
       name: [String, Number],
       iconBefore: String,
       iconAfter: String,
-      imgSrc: String
+      imgSrc: String,
+      clickable: Boolean
     },
     methods: {
       emit(event) {

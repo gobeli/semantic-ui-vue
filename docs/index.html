@@ -14,7 +14,7 @@
             Elements
           </div>
           <div class="menu">
-            <router-link v-for="route in elementRoutes" :to="route.path" @click="sidebarVisible = false" class="item">{{route.name}}</router-link>
+            <router-link v-for="route in elementRoutes" :to="route.path" @click.native="toggleMenu($event)" class="item">{{route.name}}</router-link>
           </div>
         </div>
       </ui-sidebar>
