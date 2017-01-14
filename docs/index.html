@@ -17,6 +17,14 @@
             <router-link v-for="route in elementRoutes" :to="route.path" @click.native="toggleMenu($event)" class="item">{{route.name}}</router-link>
           </div>
         </div>
+        <div class="item">
+          <div class="active header">
+            Modules
+          </div>
+          <div class="menu">
+            <router-link v-for="route in moduleRoutes" :to="route.path" @click.native="toggleMenu($event)" class="item">{{route.name}}</router-link>
+          </div>
+        </div>
       </ui-sidebar>
       <transition name="fade">
         <div class="pusher" :class="{ dimmed: sidebarVisible }" @click="toggleMenu($event)">

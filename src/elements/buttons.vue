@@ -4,6 +4,7 @@
   </div>
 </template>
 <script>
+  import Helper from '../helper';
   export default {
     name: 'ui-buttons',
     props: {
@@ -13,13 +14,7 @@
     },
     methods: {
       selectButton(button) {
-        const children = this.$children.filter(c => c.$el.classList.contains('button'));
-        let value;
-        if (children.every(c => c.name)) {
-          value = button.name;
-        } else {
-          value = button._uid;
-        }
+        const value = Helper.getNameOrUid(button);
         this.$emit('input', value);
         this.$emit('change', value);
       }

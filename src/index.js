@@ -5,9 +5,6 @@ import Flag from './elements/flag.vue';
 import Icon from './elements/icon.vue';
 import Input from './elements/input.vue';
 import Label from './elements/label.vue';
-import List from './elements/list.vue';
-import ListItem from './elements/list-item.vue';
-import Loader from './elements/loader.vue';
 
 import Checkbox from './modules/checkbox.vue';
 import Radiobutton from './modules/radiobutton.vue';
@@ -21,9 +18,6 @@ const components = {
   Divider,
   Icon,
   Label,
-  List,
-  ListItem,
-  Loader,
 
   Checkbox,
   Radiobutton,

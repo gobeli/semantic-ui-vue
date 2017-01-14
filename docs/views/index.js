@@ -6,6 +6,8 @@ import DocIcon from './doc-icon.vue';
 import DocInput from './doc-input.vue';
 import DocLabel from './doc-label.vue';
 
+import DocCheckbox from './doc-checkbox.vue';
+
 export default {
   DocHome,
   DocButton,
@@ -13,5 +15,7 @@ export default {
   DocFlag,
   DocIcon,
   DocInput,
-  DocLabel
+  DocLabel,
+
+  DocCheckbox
 };

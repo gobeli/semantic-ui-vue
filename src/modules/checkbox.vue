@@ -2,21 +2,27 @@
   <div @click="setValue" :class="{checked: value}" class="ui checkbox">
     <input
       type="checkbox" 
-      :name="name"
+      :name="nameOrUid"
       :disabled="disabled"
       :checked="value">
-    <label :for="name">
+    <label :for="nameOrUid">
       <slot></slot>
     </label>
   </div>
 </template>
 <script>
+  import Helper from '../helper.js';
   export default {
     name: 'ui-checkbox',
     props: {
       name: [String, Number],
       disabled: Boolean,
       value: Boolean
+    },
+    computed: {
+      nameOrUid() {
+        return Helper.getNameOrUid(this);
+      }
     },
     methods: {
       setValue() {

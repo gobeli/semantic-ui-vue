@@ -47,7 +47,7 @@
         type: 'string',
         description: 'Size of the icon (mini, tiny, small, large, big, huge or massive)'
       }],
-      demo: `<ui-label size="massive" icon-before="mail">23</ui-label>`,
+      demo: '<ui-label size="massive" icon-before="mail">23</ui-label>',
       demoOther:
         `<ui-label size="large" class="teal">
   Veronika

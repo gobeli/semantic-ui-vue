@@ -21,7 +21,11 @@ const elementRoutes = [
   { path: '/label', component: Views.DocLabel, name: 'Label' }
 ];
 
-routes.push(...elementRoutes);
+const moduleRoutes = [
+  { path: '/checkbox', component: Views.DocCheckbox, name: 'Checkbox' }
+];
+
+routes.push(...elementRoutes, ...moduleRoutes);
 
 const router = new VueRouter({
   routes
@@ -35,7 +39,8 @@ new Vue({
   data() {
     return {
       sidebarVisible: false,
-      elementRoutes
+      elementRoutes,
+      moduleRoutes
     };
   },
   methods: {
