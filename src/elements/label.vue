@@ -1,5 +1,5 @@
 <template>
-  <div class="ui label" @click="emit('click')" :class="{image: imgSrc, button: clickable}">
+  <div class="ui label" @click="emit('click')" :class="[{image: imgSrc, button: clickable}, size]">
     <img v-if="imgSrc" :src="imgSrc" :alt="$slots.default[0].textContent">
     <ui-icon v-if="iconBefore" @click="emit('icon-before-click')" :class="[iconBefore]"></ui-icon>
     <slot></slot>
@@ -16,7 +16,8 @@
       iconBefore: String,
       iconAfter: String,
       imgSrc: String,
-      clickable: Boolean
+      clickable: Boolean,
+      size: String
     },
     methods: {
       emit(event) {
