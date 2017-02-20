@@ -1,7 +1,7 @@
 <template>
   <div @click="setValue" :class="{checked: value === uiValue}" class="ui checkbox radio">
     <input
-      type="radio" 
+      type="radio"
       :name="name"
       :value="uiValue"
       :checked="value === uiValue"

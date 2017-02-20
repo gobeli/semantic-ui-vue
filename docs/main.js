@@ -22,7 +22,8 @@ const elementRoutes = [
 ];
 
 const moduleRoutes = [
-  { path: '/checkbox', component: Views.DocCheckbox, name: 'Checkbox' }
+  { path: '/checkbox', component: Views.DocCheckbox, name: 'Checkbox' },
+  { path: '/radiobutton', component: Views.DocRadiobutton, name: 'Radiobutton' }
 ];
 
 routes.push(...elementRoutes, ...moduleRoutes);

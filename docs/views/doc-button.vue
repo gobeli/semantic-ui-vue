@@ -21,7 +21,7 @@
       </template>
       <template slot="code">&lt;ui-button class=&quot;facebook right labeled&quot; icon-after=&quot;facebook&quot;&gt;Follow&lt;/ui-button&gt;</template>
     </demo-panel>
-    
+
     <ui-divider></ui-divider>
     <h1>Buttons</h1>
     <demo-panel>
@@ -72,9 +72,9 @@
 <ui-button icon-before="play"></ui-button>`,
       buttonsDemo:
 `<ui-buttons v-model="buttons" highlight-selected>
-<ui-button name="button-1" class="primary">1</ui-button>
-<ui-button name="button-2" class="primary">2</ui-button>
-<ui-button name="button-3" class="primary">3</ui-button>
+  <ui-button name="button-1" class="primary">1</ui-button>
+  <ui-button name="button-2" class="primary">2</ui-button>
+  <ui-button name="button-3" class="primary">3</ui-button>
 </ui-buttons>`
     })
   };

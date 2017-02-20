@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    html {
+box-sizing: border-box;
+color: #F5F5F5;
+}
+
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+body {
+display: flex;
+justify-content: center;
+}
+
+#app {
+background-color: #444;
+padding: 2rem;
+margin: 2rem 0;
+display: flex;
+flex-direction: column;
+align-items: center;
+h1 {
+  margin-top: 0;
+  font-weight: normal;
+}
+}
+
+.editors {
+display: flex;
+justify-content: space-between;
+font-size: 1.25rem;
+}
+
+.length-editor {
+padding: .5rem;
+.title {
+  font-weight: 300;
+  font-variant: small-caps;
+}
+.editor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    padding: .5rem;
+    &.value {
+      font-size: 1.75rem;
+    }
+    &.add, &.subtract {
+      font-size: 1.5rem;
+      cursor: pointer;
+      &:after {
+        content: '-'
+      }
+      &.add:after {
+        content: '+'
+      }
+    }
+  }
+}
+}
+
+.clock {
+height: 200px;
+width: 200px;
+border: 2px solid #f5f5f5;
+border-radius: 50%;
+padding: 4px;
+overflow: hidden;
+position: relative;
+.fill {
+  width: 100%;
+  height: 100%;
+  background-color: #c0392b;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+h2 {
+  z-index: 1;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+}
+    </style>
+  </head>
+  <body>
+    <div id="app">
+  <h1>Pomdoro Clock</h1>
+  <div class="editors">
+    <length-editor :enabled="!break" title="Break length" v-model="breakLength"></length-editor>
+    <length-editor :enabled="!break" title="Session length" v-model="sessionLength"></length-editor>
+  </div>
+  <div class="clock" @click="break = !break">
+    <div class="fill" :style="{height: percentage + '%'}"></div>
+    <h2>{{remaining}}</h2>
+  </div>
+</div>
+<h2>sdfasdf</h2>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+  const lengthEditor = {
+template: `
+  <div class="length-editor">
+    <span class="title">{{title}}</span>
+    <div class="editor">
+      <span class="add" @click="add(1)"></span>
+      <span class="value">{{curValue}}</span>
+      <span class="subtract" @click="add(-1)"></span>
+    </div>
+  </div>
+`,
+data: () => ({
+  curValue: 0
+}),
+props: {
+  value: {
+    type: Number,
+    required: true
+  },
+  title: String,
+  enabled: Boolean
+},
+methods: {
+  add(n) {
+    if (!enabled) return;
+    this.curValue += n;
+  }
+},
+mounted() {
+  this.curValue = this.value;
+},
+watch: {
+  curValue(val) {
+    this.$emit('input', val);
+    this.$emit('change', val);
+  }
+},
+};
+Vue.component('length-editor', lengthEditor);
+const app = new Vue({
+data: () => ({
+  breakLength: 5,
+  sessionLength: 25,
+  elapsed: 0,
+  isBreak: false,
+  pause: true
+}),
+computed: {
+  percentage() {
+    const seconds = this.isBreak ? this.breakLength*60 : this.sessionLength*60;
+    return (this.elapsed*100)/seconds;
+  },
+  remaining() {
+    let seconds = this.isBreak ? this.breakLength*60 : this.sessionLength*60;
+    seconds -= this.elapsed;
+    return this.secondsToString(seconds);
+  }
+},
+methods: {
+  secondsToString(n) {
+    const minutes = Math.floor(n/60);
+    const seconds = n%60;
+    return `${minutes < 10 ? '0'+minutes : minutes}:${seconds < 10 ? '0'+seconds : seconds}`;
+  },
+  toggleBreak() {
+    this.break = !this.break;
+  }
+},
+mounted() {
+  setInterval(() => {
+    if (!this.pause) {
+      this.elapsed += 1;
+    }
+  }, 1000);
+}
+}).$mount('#app');
+
+console.log(app);
+  </script>
+</html>

@@ -7,6 +7,7 @@ import DocInput from './doc-input.vue';
 import DocLabel from './doc-label.vue';
 
 import DocCheckbox from './doc-checkbox.vue';
+import DocRadiobutton from './doc-radiobutton.vue';
 
 export default {
   DocHome,
@@ -17,5 +18,6 @@ export default {
   DocInput,
   DocLabel,
 
-  DocCheckbox
+  DocCheckbox,
+  DocRadiobutton
 };
