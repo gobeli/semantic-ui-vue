@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Flag</h1>
+    <h1>Checkbox</h1>
     <demo-panel>
       <template slot="demo">
         <ui-checkbox v-model="visible">Make my profile visible</ui-checkbox>

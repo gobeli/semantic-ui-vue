@@ -23,6 +23,7 @@ const elementRoutes = [
 
 const moduleRoutes = [
   { path: '/checkbox', component: Views.DocCheckbox, name: 'Checkbox' },
+  { path: '/dropdown', component: Views.DocDropdown, name: 'Dropdown' },
   { path: '/radiobutton', component: Views.DocRadiobutton, name: 'Radiobutton' }
 ];
 

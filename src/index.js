@@ -7,6 +7,7 @@ import Input from './elements/input.vue';
 import Label from './elements/label.vue';
 
 import Checkbox from './modules/checkbox.vue';
+import Dropdown from './modules/dropdown.vue';
 import Radiobutton from './modules/radiobutton.vue';
 import Sidebar from './modules/sidebar.vue';
 
@@ -18,6 +19,7 @@ const components = {
   Divider,
   Icon,
   Label,
+  Dropdown,
 
   Checkbox,
   Radiobutton,
