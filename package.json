@@ -11,6 +11,10 @@
     "build": "webpack",
     "start": "webpack-dev-server"
   },
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
   "dependencies": {
     "vue": "^2.0.3",
     "vue-clickaway": "^2.0.0",
