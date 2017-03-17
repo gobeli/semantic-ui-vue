@@ -13197,7 +13197,7 @@
 	  }
 	};
 	// </script>
-	// <style lang="sass">
+	// <style lang="scss">
 	//   .ui.sidebar {  
 	//     transition: all .5s ease;
 	//     &.slide-in-enter-active, &.slide-in-leave-active {
@@ -13208,6 +13208,7 @@
 	//     }
 	//   }
 	// </style>
+	//
 
 /***/ },
 /* 86 */
