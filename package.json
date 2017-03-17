@@ -1,5 +1,5 @@
 {
-  "name": "vue-semantic-vue",
+  "name": "semantic-ui-vue",
   "version": "0.0.1",
   "description": "Semantic UI integration for vue.js 2.0",
   "author": "Etienne Gobeli",
@@ -11,6 +11,10 @@
     "build": "webpack",
     "start": "webpack-dev-server"
   },
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
   "dependencies": {
     "vue": "^2.0.3",
     "vue-clickaway": "^2.0.0",
